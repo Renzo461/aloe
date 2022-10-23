@@ -1,6 +1,6 @@
 import React from 'react'
-import menu from "../menu.svg"
-import user from "../user.png"
+import menu from "../images/menu.svg"
+import user from "../images/user.png"
 
 const AsideNavBar = () => {
   return (
