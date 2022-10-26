@@ -1,5 +1,6 @@
 import React from 'react'
 import ButtonPS from '../Comp/ButtonPS'
+import FormCP from '../Comp/Form/FormCP'
 import InputCP from '../Comp/InputCP'
 import TableCP from '../Comp/Table/TableCP'
 

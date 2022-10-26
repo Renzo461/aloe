@@ -7,8 +7,7 @@ const MainView = ({nombre}) => {
   return (
     <div className='flex-1'>
       <HeaderNavBar nombre={nombre}/>
-      <EBMain/>
-      
+      <EBMain/>      
     </div>
   )
 }
