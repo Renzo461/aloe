@@ -1,12 +1,12 @@
 import React from 'react'
-import noti from '../images/notificación.svg'
-import salir from '../images/salir.svg'
+import noti from '../../images/notificación.svg'
+import salir from '../../images/salir.svg'
 
-const HeaderNavBar = () => {
+const HeaderNavBar = ({nombre}) => {
   return (
-    <div className='flex justify-between bg-white drop-shadow-md items-center h-14 px-7'>
+    <div className='flex justify-between bg-white drop-shadow-lg items-center h-14 px-7'>
         <div>
-            <p className='txVerde'>Bienvenido Alumno</p>
+            <p className='txVerde capitalize'>Bienvenid@ {nombre}</p>
         </div>
         <div className='flex items-center'>
             <div className='mr-5 cursor-pointer'>

@@ -3,29 +3,133 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-*{
-    font-family: 'Montserrat', sans-serif;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+
+#root{
+    min-width: 100vw;
 }
-h5{    
+
+h1 {
+    font-size: 28px;
+    line-height: 27px;
+}
+
+h2 {
+    font-size: 26px;
+    line-height: 27px;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 27px;
+}
+
+h4 {
+    font-size: 22px;
+    line-height: 27px;
+}
+
+h5 {
     font-size: 20px;
     line-height: 27px;
 }
-p{    
-    font-size: 18px;
+
+p, label {
+    font-size: 16px;
     line-height: 27px;
 }
-.normal{
+
+th:nth-child(even),
+td:nth-child(even) {
+    background-color: rgb(238, 238, 238);
+}
+
+th:nth-child(odd),
+td:nth-child(odd) {
+    background-color: rgb(252, 252, 252);
+}
+
+th {
+    font-size: 16px;
+    line-height: 27px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 8px;
+    border-bottom: solid 1px black;
+}
+
+td {
+    font-size: 16px;
+    line-height: 27px;
+    font-weight: 400;
+    padding: 8px;
+    border-bottom: solid 1px black;
+}
+
+.normal {
     font-weight: 400;
 }
-.bold{
+
+.bold {
     font-weight: 700;
 }
-.bgVerde{
+
+.bgVerde {
     background: #348F6C;
 }
-.txVerde{
+
+.txVerde {
     color: #348F6C;
+}
+
+.hover-txVerde:hover h5,
+.hover-txVerde:hover svg {
+    color: #348F6C;
+}
+
+.bgCrema {
+    background: #D7B570;
+}
+
+.txCrema {
+    color: #D7B570;
+}
+
+.borCrema {
+    border: 2px solid #D7B570;
+    border-radius: 10px;
+}
+
+.menu svg {
+    height: 24px;
+    width: 24px;
+    color: white;
+}
+
+.active {
+    background-color: white;
+}
+
+.active h5,
+.active svg {
+    color: #348F6C;
+}
+.nav{
+    transition: width .5s, oveflow .5s;
+}
+
+.actionVerde{
+    background-color: #2EAA19;
+    border-radius: 2px;
+}
+.actionAzul{
+    background-color: #0038FF;
+    border-radius: 2px;
+}
+.actionRojo{
+    background-color: #FF0000;
+    border-radius: 2px;
+}
+.form{
+    width: 460px;
 }

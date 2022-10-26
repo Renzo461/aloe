@@ -1,10 +1,14 @@
 import React from 'react'
-import HeaderNavBar from './HeaderNavBar'
+import EBMain from './Estaciones Base/EBMain'
+import HeaderNavBar from './Aside/HeaderNavBar'
+import FormCP from './Comp/Form/FormCP'
 
-const MainView = () => {
+const MainView = ({nombre}) => {
   return (
-    <div className='w-full'>
-      <HeaderNavBar/>      
+    <div className='flex-1'>
+      <HeaderNavBar nombre={nombre}/>
+      <EBMain/>
+      
     </div>
   )
 }

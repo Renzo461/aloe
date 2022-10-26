@@ -1,12 +1,13 @@
 import './App.css';
-import AsideNavBar from './components/AsideNavBar';
+import AsideNavBar from './components/Aside/AsideNavBar';
 import MainView from './components/MainView';
 
-function App() {
+const App =()=> {
+  const name="beatriz"
   return (
-    <div className="App flex min-h-screen">
-      <AsideNavBar/>
-      <MainView/>      
+    <div className="App flex flex-nowrap min-h-screen">
+      <AsideNavBar nombre={name}/>
+      <MainView nombre={name}/>      
     </div>
   );
 }
