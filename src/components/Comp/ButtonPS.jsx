@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ButtonPS = ({ estilo, texto, espacio }) => {
+const ButtonPS = ({ estilo, texto, espacio, funcion }) => {
     let style = "cursor-pointer rounded-lg flex items-center justify-center h-12 uppercase bold"
     if (estilo === "primario") {
         style += " bgCrema text-white "
@@ -13,7 +13,7 @@ const ButtonPS = ({ estilo, texto, espacio }) => {
     }
     return (
         <>
-            <div className={style}>
+            <div className={style} onClick={funcion}>
                 <p>{texto}</p>
             </div>
         </>
