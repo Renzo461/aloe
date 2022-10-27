@@ -1,22 +1,35 @@
 import React from 'react'
 import ActionCP from '../ActionCP'
-const TableRowCP = ({ datos }) => {
+const TableRowCP = ({ datos, showAction = true }) => {
     const dat = datos.map(
         (e) => <td key={e}>{e}</td>
     )
-
-    return (
-        <tr>
-            {dat}
-            <td>
-                <div className='flex justify-center items-center'>
-                    <ActionCP icono="ver" />
-                    <ActionCP icono="editar" espaciado="mx-2" />
-                    <ActionCP icono="eliminar" />
-                </div>
-            </td>
-        </tr>
-    )
+ 
+    if (showAction){
+        return (
+            <tr>
+                {dat}
+                <td>
+                    <div className='flex justify-center items-center'>
+                        <ActionCP icono="ver" />
+                        <ActionCP icono="editar" espaciado="mx-2" />
+                        <ActionCP icono="eliminar" />
+                    </div>
+                </td>
+            </tr>
+        )
+    }
+    else{
+        return (
+            <tr>
+                {dat}
+                <td>
+                    
+                </td>
+            </tr>
+        )
+    }
+    
 }
 
 export default TableRowCP

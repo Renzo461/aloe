@@ -3,7 +3,7 @@ import AsideNavBar from './components/Aside/AsideNavBar';
 import MainView from './components/MainView';
 
 const App =()=> {
-  const name="beatriz"
+  const name="laura"
   return (
     <div className="App flex flex-nowrap min-h-screen">
       <AsideNavBar nombre={name}/>

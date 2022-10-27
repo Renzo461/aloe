@@ -2,13 +2,13 @@ import React from 'react'
 import TableHeadCP from './TableHeadCP'
 import TableRowCP from './TableRowCP'
 
-const TableCP = ({ titulos, datos }) => {
+const TableCP = ({ titulos, datos, showAction = true }) => {
 
     //CONSTRUYENDO FILAS DE LA TABLA
     const filaTabla = datos.eb.map(
         (e) => {
             const d = (Object.values(e))
-            return <TableRowCP key={d[0]} datos={d} />
+            return <TableRowCP key={d[0]} datos={d} showAction={showAction}/>
         }
     )
 
