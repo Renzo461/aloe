@@ -1,7 +1,5 @@
 import React from 'react'
-import ButtonPS from '../Comp/ButtonPS'
 import FormIncidente from '../Comp/Form/FormIncidente'
-import InputCP from '../Comp/InputCP'
 import TableCP from '../Comp/Table/TableCP'
 
 
@@ -15,10 +13,11 @@ const ReporteIncidente = () => {
     ]
   }
   const titulosTabla = ["id", "descripción", "fecha y hora", "estado"]
+
   return (
     <div className='px-5 mt-5'>
       <div>
-        <h1 className='bold uppercase'>Reporte de problemas</h1>
+        <h1 className='uppercase bold'>Reporte de problemas</h1>
         <div className='flex justify-between my-4'>
         <h6 className='mt-7 bold'>Reporte de incidentes</h6>
           <div className='flex' style={{ width: "430px" }}>

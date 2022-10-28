@@ -13,8 +13,6 @@ const EBMain = () => {
     console.log(opacidad)
   }
 
-
-
   const datosJson = {
     "eb": [
       { "id": "EB001", "descripcion": "Fábrica de metales", "ubicacion": "Av. Sal si puedes", "modelo": "MB8611", "nodos": "10", "ip": "192.168.174.25", "mascara": "255.255.255.255" },
@@ -26,7 +24,7 @@ const EBMain = () => {
   return (
     <div className='px-5 mt-5'>
       <div>
-        <h1 className='bold uppercase'>Estaciones base</h1>
+        <h1 className='uppercase bold'>Estaciones base</h1>
         <div className='flex justify-between my-4'>
           <InputCP label="Buscar:" placeholder="EB001" id="eb" />
           <div className='flex' style={{ width: "430px" }}>
