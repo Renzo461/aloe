@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import './App.css';
 import AsideNavBar from './components/Aside/AsideNavBar';
 import HeaderNavBar from './components/Aside/HeaderNavBar'
 import EBMain from './components/Estaciones Base/EBMain';

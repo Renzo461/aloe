@@ -2,10 +2,12 @@ import React from 'react'
 import ActionCP from '../ActionCP'
 const TableRowCP = ({ datos, showAction = true }) => {
     const dat = datos.map(
-        (e) => <td key={e}>{e}</td>
+        (e) => {
+            return <td key={e} className="text-center">{e}</td>
+        }
     )
- 
-    if (showAction){
+
+    if (showAction) {
         return (
             <tr>
                 {dat}
@@ -19,17 +21,17 @@ const TableRowCP = ({ datos, showAction = true }) => {
             </tr>
         )
     }
-    else{
+    else {
         return (
             <tr>
                 {dat}
                 <td>
-                    
+
                 </td>
             </tr>
         )
     }
-    
+
 }
 
 export default TableRowCP
