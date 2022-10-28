@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SelectCP = (label, options, id, className) => {
+const SelectCP = ({ label, options, id, className }) => {
     const ops = []
 
     options.forEach((data) => {

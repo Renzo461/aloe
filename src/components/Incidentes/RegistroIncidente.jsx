@@ -5,13 +5,13 @@ import TableCP from '../Comp/Table/TableCP'
 
 const ReporteIncidente = () => {
   
-  const datosJson = {
-    "eb": [
+  const datosJson = 
+    [
       { "id": "RI001", "descripcion": "No me permite exportar documento", "fecha y hora": "27/09/22 10:45", "estado": "En proceso"},
       { "id": "RI002", "descripcion": "Demora en cargar las imágenes", "fecha y hora": "03/09/22 21:22", "estado": "Finalizado"},
       { "id": "RI003", "descripcion": "Problemas con las notificaciones", "fecha y hora": "08/09/22 09:02", "estado": "Finalizado"}
     ]
-  }
+  
   const titulosTabla = ["id", "descripción", "fecha y hora", "estado"]
 
   return (
