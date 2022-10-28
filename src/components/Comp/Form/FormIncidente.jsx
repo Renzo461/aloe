@@ -6,8 +6,9 @@ import PopupCP from '../Popups/PopupCP'
 import { BsCheckCircle } from 'react-icons/bs'
 import SelectCP from '../SelectCP'
 
-const FormIncidente = () => {
+const FormIncidente = (props) => {
     const [opacidad, setopacidad] = useState(false)
+    const [description, setDescription] = useState(false)
 
     const verAgregar = () =>{
         setopacidad(!opacidad)
@@ -16,12 +17,18 @@ const FormIncidente = () => {
 
     return (
         <>
-            <form className='px-4 form' style={{width: "80%" }}>
-                <InputCP label="Descripción: " placeholder={"No me permite seleccionar ECA"} id={"descripcion"} className={"pb-5"}/>
+            <form className='px-4 form' style={{ width: "80%" }} onSubmit={(e) => { 
+                e.preventDefault();
+                props.addIncidente(description);
+            }}>
+                <InputCP label="Descripción: " placeholder={"No me permite seleccionar ECA"} id={"descripcion"} className={"pb-5"} required={true} value={description} onChange={()=> setDescription(document.getElementById('descripcion').value)} />
                 <SelectCP label="Prioridad:" options={[{text: "Baja", value: 1},{text: "Media", value: 2}, {text: "Alta", value: 3}]} id={"prioridad"} className={"pb-5"}/>
                 <InputFile label="Adjuntar problema:" id={"documento"} className={"pb-5"}/>
                 <div className='flex justify-center' >
-                    <div><ButtonPS estilo="primario" texto="Enviar" espacio="px-20" funcion={verAgregar} /></div>
+                    <div><ButtonPS estilo="primario" texto="Enviar" espacio="px-20" funcion={() => { 
+                        verAgregar();
+                        props.addIncidente(description);
+                    }} /></div>
                 </div>
             </form>
             <PopupCP visible={opacidad} funcion={verAgregar} title={"Resgistro de Incidentes"} description={"Se ha registrado correctamente"} buttonText={"Aceptar"} icon={<BsCheckCircle />} />

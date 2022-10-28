@@ -7,8 +7,8 @@ import TableCP from '../Comp/Table/TableCP'
 
 const InformECA = () => {
 
-  const datosJson = {
-    "eb": [
+  const datosJson = 
+    [
       { "id": "", "descripcion": "Valor anual de concentración de plomo", "fecha y hora": "", "estado": ""},
       { "id": "", "descripcion": "Material particulado con diámetro menor a 2,5 micras", "fecha y hora": "", "estado": ""},
       { "id": "", "descripcion": "Material particulado con diámetro menor a 10 micras", "fecha y hora": "", "estado": ""},
@@ -16,7 +16,7 @@ const InformECA = () => {
       { "id": "", "descripcion": "Dióxido de Nitrógeno", "fecha y hora": "", "estado": ""},
       { "id": "", "descripcion": "Mercurio Gaseoso Total", "fecha y hora": "", "estado": ""}
     ]
-  }
+  
   const titulosTabla = ["", "Estándares de calidad ambiental", "", ""]
   
   return (
