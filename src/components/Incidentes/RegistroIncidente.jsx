@@ -15,7 +15,6 @@ const ReporteIncidente = () => {
   const titulosTabla = ["id", "descripción", "fecha y hora", "estado"]
 
   function addIncidente(description) {
-    console.log("addIncidente from child: " + description);
     let today = new Date();
     let date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
     let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();

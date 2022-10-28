@@ -17,7 +17,18 @@ const InformECA = () => {
       { "id": "", "descripcion": "Mercurio Gaseoso Total", "fecha y hora": "", "estado": ""}
     ]
   
+  const datosFabricas = 
+    [
+      { "id": "", "descripcion": "Valor anual de concentración de plomo", "fecha y hora": "", "estado": ""},
+      { "id": "", "descripcion": "Material particulado con diámetro menor a 2,5 micras", "fecha y hora": "", "estado": ""},
+      { "id": "", "descripcion": "Material particulado con diámetro menor a 10 micras", "fecha y hora": "", "estado": ""},
+      { "id": "", "descripcion": "Dióxido de Azufre", "fecha y hora": "", "estado": ""},
+      { "id": "", "descripcion": "Dióxido de Nitrógeno", "fecha y hora": "", "estado": ""},
+      { "id": "", "descripcion": "Mercurio Gaseoso Total", "fecha y hora": "", "estado": ""}
+    ]
+  
   const titulosTabla = ["", "Estándares de calidad ambiental", "", ""]
+  const fabricasTabla = ["", "Fábricas que cuentan con ECAs", "", ""]
   
   return (
     <div className='px-5 mt-5'>
@@ -30,9 +41,12 @@ const InformECA = () => {
           </div>
         </div>
         <div className='flex justify-between my-4'>
-        <TableCP titulos={titulosTabla} datos={datosJson} showAction={false}/>
-          <div className='flex' style={{ width: "630px" }}>
+          
+          <TableCP titulos={titulosTabla} datos={datosJson} showAction={false}/>
+            <div className='flex' style={{ width: "230px" }}>
           </div>
+          <TableCP titulos={fabricasTabla} datos={datosFabricas} showAction={false}/>
+
         </div>
         
       </div>
