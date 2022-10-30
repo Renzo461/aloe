@@ -19,12 +19,9 @@ const InformECA = () => {
   
   const datosFabricas = 
     [
-      { "id": "", "descripcion": "Valor anual de concentración de plomo", "fecha y hora": "", "estado": ""},
-      { "id": "", "descripcion": "Material particulado con diámetro menor a 2,5 micras", "fecha y hora": "", "estado": ""},
-      { "id": "", "descripcion": "Material particulado con diámetro menor a 10 micras", "fecha y hora": "", "estado": ""},
-      { "id": "", "descripcion": "Dióxido de Azufre", "fecha y hora": "", "estado": ""},
-      { "id": "", "descripcion": "Dióxido de Nitrógeno", "fecha y hora": "", "estado": ""},
-      { "id": "", "descripcion": "Mercurio Gaseoso Total", "fecha y hora": "", "estado": ""}
+      { "id": "", "descripcion": "Ingenieros S.A ", "fecha y hora": "", "estado": ""},
+      { "id": "", "descripcion": "Metales S.A.C", "fecha y hora": "", "estado": ""},
+      { "id": "", "descripcion": "Fábrica de soldadura EMSE S.A", "fecha y hora": "", "estado": ""}
     ]
   
   const titulosTabla = ["", "Estándares de calidad ambiental", "", ""]
@@ -34,9 +31,9 @@ const InformECA = () => {
     <div className='px-5 mt-5'>
       <div>
         <h3 className='bold uppercase text-center'>Información de Estándares de Calidad Ambiental (ECA)</h3>
-        <p>Los Estándares de Calidad Ambiental (ECA) fueron establecidos desde nnnn por el Ministerio del Ambiente (MINAM) con la finalidad de garantizar la conservación de la calidad ambiental mediante el uso de instrumentos de gestión ambiental sofisticados y de evaluación detallada. Estos se evalúan debido en los diferentes sucesos que se vienen presentando en el Distrito de...</p>
-        <div className='flex justify-between my-4'>
-          <InputCP label="Buscar:" placeholder="EB001" id="eb" />
+        <p className='mt-4'>Los Estándares de Calidad Ambiental (ECA) fueron establecidos desde nnnn por el Ministerio del Ambiente (MINAM) con la finalidad de garantizar la conservación de la calidad ambiental mediante el uso de instrumentos de gestión ambiental sofisticados y de evaluación detallada. Estos se evalúan debido en los diferentes sucesos que se vienen presentando en el Distrito de...</p>
+        <div className='flex justify-between my-4 mx-20'>
+          <InputCP label="Buscar:" placeholder="Plomo" id="searchEnvironment" />
           <div className='flex' style={{ width: "430px" }}>
           </div>
         </div>

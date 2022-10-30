@@ -29,8 +29,8 @@ const AsideNavBar = ({ nombre }) => {
       <AsideNavBarUser nombre={nombre}></AsideNavBarUser>
       <AsideNavBarMenu icon={<FaEnvira />} titulo="Ambiente" nav="/ambiente"/>
       <AsideNavBarMenu icon={<AiFillCar />} titulo="Transporte" nav="/transporte"/>
-      <AsideNavBarMenu icon={<FaUsers />} titulo="usuarios" nav="/usuario"/>
-      <AsideNavBarMenu icon={<BsHouseDoorFill />} titulo="Municipalidad" nav="/municipalidad"/>
+      <AsideNavBarMenu icon={<FaUsers />} titulo="usuarios" nav="/registro-incidente"/>
+      <AsideNavBarMenu icon={<BsHouseDoorFill />} titulo="Municipalidad" nav="/registro-eca"/>
       <AsideNavBarMenu icon={<AiFillSetting />} titulo="Configuración" nav="/configuracion"/>
     </div>
   )
