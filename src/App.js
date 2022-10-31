@@ -5,6 +5,7 @@ import EBMain from './components/Estaciones Base/EBMain';
 import InformECA from './components/SensoresAmbientales/InformECA'
 import RegistroECA from './components/SensoresAmbientales/RegistroECA'
 import RegistroIncidente from './components/Incidentes/RegistroIncidente'
+import Nodo from './components/Nodo/Nodo';
 
 const App = () => {
   const name = "laura"
@@ -19,6 +20,7 @@ const App = () => {
             <Route path='/configuracion' element={<InformECA />} />
             <Route path='/registro-eca' element={<RegistroECA />} />
             <Route path='/registro-incidente' element={<RegistroIncidente />}/>
+            <Route path='/nodo' element={<Nodo/>}/>
           </Routes>
         </div>
       </div>

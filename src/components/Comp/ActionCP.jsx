@@ -3,24 +3,24 @@ import { GoEye } from 'react-icons/go'
 import { AiTwotoneEdit } from 'react-icons/ai'
 import { FaRegTrashAlt } from 'react-icons/fa'
 
-const ActionCP = ({ icono, espaciado }) => {
+const ActionCP = ({ icono, espaciado, verEliminar, detalle, actualizar }) => {
     if (icono === "ver") {
         return (
-            <div className={'h-7 w-7 actionVerde flex justify-center items-center cursor-pointer '+espaciado}>
+            <div className={'h-7 w-7 actionVerde flex justify-center items-center cursor-pointer '+espaciado} onClick={detalle}>
                 <GoEye color='white' />
             </div>
         )
     }
     else if (icono === "editar") {
         return (
-            <div className={'h-7 w-7 actionAzul flex justify-center items-center cursor-pointer '+espaciado}>
+            <div className={'h-7 w-7 actionAzul flex justify-center items-center cursor-pointer '+espaciado} onClick={actualizar}>
                 <AiTwotoneEdit color='white' />
             </div>
         )
     }
     else if (icono === "eliminar") {
         return (
-            <div className={'h-7 w-7 actionRojo flex justify-center items-center cursor-pointer '+espaciado}>
+            <div className={'h-7 w-7 actionRojo flex justify-center items-center cursor-pointer '+espaciado} onClick={verEliminar}>
                 <FaRegTrashAlt color='white' />
             </div>
         )
