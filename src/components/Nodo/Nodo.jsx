@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import ButtonPS from '../Comp/ButtonPS'
-import FormCP from '../Comp/Form/FormCP'
+import FormNodo from './FormNodo'
 import InputCP from '../Comp/InputCP'
 import TableCP from '../Comp/Table/TableCP'
 import Eliminar from './Eliminar'
@@ -53,7 +53,7 @@ const Nodo = () => {
         </div>
       </div>
       <TableCP titulos={titulosTabla} datos={datosJson} eliminar={verEliminar} detalle={verDetalle} actualizar={verActualizar} />
-      <FormCP visible={opacidad} funcion={verAgregar} />
+      <FormNodo visible={opacidad} funcion={verAgregar} />
       <Eliminar visible={eliminar} funcion={verEliminar} />
       <Detalle visible={detalle} detalle={verDetalle} />
       <Actualizar visible={actualizar} actualizar={verActualizar} />

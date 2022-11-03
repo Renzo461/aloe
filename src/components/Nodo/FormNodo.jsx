@@ -1,5 +1,6 @@
 import React from 'react'
-import ButtonPS from '../ButtonPS'
+import ButtonPS from '../Comp/ButtonPS'
+
 import InputCP from '../Comp/InputCP'
 
 const FormNodo = ({ visible, funcion }) => {
