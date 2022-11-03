@@ -16,7 +16,7 @@ const App = () => {
         <div className='flex-1'>
           <HeaderNavBar nombre={name} />
           <Routes>
-            <Route path='/ambiente' element={<EBMain/>}/>
+            <Route path='/estaciones' element={<EBMain/>}/>
             <Route path='/configuracion' element={<InformECA />} />
             <Route path='/registro-eca' element={<RegistroECA />} />
             <Route path='/registro-incidente' element={<RegistroIncidente />}/>
