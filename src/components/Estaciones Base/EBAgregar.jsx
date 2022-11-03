@@ -34,7 +34,7 @@ const EBAgregar = ({ visible, agregar }) => {
                 'Content-Type': 'application/json'
             }
         }
-        const URL = "http://192.168.101.9:4040/estacionbase/"
+        const URL = "http://192.168.1.40:4040/estacionbase/"
         fetch(URL, body)
         .then(res => res.json())        
     }

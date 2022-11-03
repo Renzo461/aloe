@@ -6,6 +6,7 @@ import TableCP from '../Comp/Table/TableCP'
 import Eliminar from './Eliminar'
 import Detalle from './Detalle'
 import Actualizar from './Actualizar'
+import { useEffect } from 'react'
 
 const Nodo = () => {
   const [opacidad, setopacidad] = useState(false)
@@ -27,14 +28,28 @@ const Nodo = () => {
   const verActualizar = () => {
     setactualizar(!actualizar)
   }
+  const [datosJson, setdatosJson] = useState([])
+
+  useEffect(() => {
+    obtenerEB()
+  }, [])
+
+  const obtenerEB = () => {
+    const URL = "http://192.168.1.40:4040/nodo/"
+    fetch(URL)
+      .then(res => res.json())
+      .then(dat => setdatosJson(dat))
+  }
+  const buscarEB = (id) => {
+    const URL = "http://192.168.1.40:4040/nodo/" + id
+    fetch(URL)
+      .then(res => res.json())
+      .then(dat => setdatosJson(dat))
+  }
 
 
-  const datosJson = [
-    { "idNo": "ND001", "descripcionNo": "Sensor de Humedad", "ubicacionNo": "Av. Sal si puedes", "modeloNo": "MB8611", "ipNo": "192.168.174.25", "nivelNo": "70%", "modoNo": "Sleep", "EstNo": "EB001" },
-    { "idNo": "ND002", "descripcionNo": "Sensor de Humedad", "ubicacionNo": "Av. Andes", "modeloNo": "MB8613", "ipNo": "192.168.174.14", "nivelNo": "80%", "modoNo": "Active", "EstNo": "EB001" },
-    { "idNo": "ND003", "descripcionNo": "Sensor de Humedad", "ubicacionNo": "Av. San Carlos", "modeloNo": "MB8620", "ipNo": "192.168.174.140", "nivelNo": "50%", "modoNo": "Active", "EstNo": "EB001" },
-  ]
-  const titulosTabla = ["id", "descripción", "ubicación", "modelo", "ip", "nivel", "modo", "Est.Base", "Acciones"]
+ 
+  const titulosTabla = ["id","ubicación", "placa", "ip", "mascara", "gateway","bateria","modo","distancia", "Est.Base", "Acciones"]
   return (
     <div className='px-5 mt-5'>
       <div>
