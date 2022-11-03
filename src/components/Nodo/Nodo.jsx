@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import ButtonPS from '../Comp/ButtonPS'
-import FormCP from '../Comp/Form/FormCP'
+import FormNodo from './FormNodo'
 import InputCP from '../Comp/InputCP'
 import TableCP from '../Comp/Table/TableCP'
-import EBActualizar from './EBActualizar'
-import EBAgregar from './EBAgregar'
+import Eliminar from './Eliminar'
+import Detalle from './Detalle'
+import Actualizar from './Actualizar'
+import { useEffect } from 'react'
 
-
-const EBMain = () => {
+const Nodo = () => {
   const [opacidad, setopacidad] = useState(false)
   const verAgregar = () => {
     setopacidad(!opacidad)
@@ -27,7 +28,6 @@ const EBMain = () => {
   const verActualizar = () => {
     setactualizar(!actualizar)
   }
-
   const [datosJson, setdatosJson] = useState([])
 
   useEffect(() => {
@@ -35,26 +35,27 @@ const EBMain = () => {
   }, [])
 
   const obtenerEB = () => {
-    const URL = "http://192.168.1.40:4040/estacionbase/"
+    const URL = "http://192.168.1.40:4040/nodo/"
     fetch(URL)
       .then(res => res.json())
       .then(dat => setdatosJson(dat))
   }
   const buscarEB = (id) => {
-    const URL = "http://192.168.1.40:4040/estacionbase/" + id
+    const URL = "http://192.168.1.40:4040/nodo/" + id
     fetch(URL)
       .then(res => res.json())
       .then(dat => setdatosJson(dat))
   }
-  const titulosTabla = ["id", "fábrica", "ubicación", "modelo", "nº nodos", "ip", "mascara", "dns", "acciones"]
+
+
+ 
+  const titulosTabla = ["id","ubicación", "placa", "ip", "mascara", "gateway","bateria","modo","distancia", "Est.Base", "Acciones"]
   return (
     <div className='px-5 mt-5'>
       <div>
-        <h1 className='uppercase bold'>Estaciones base</h1>
+        <h1 className='bold uppercase'>NODOS:</h1>
         <div className='flex justify-between my-4'>
-          <form>
-            <InputCP label="Buscar:" placeholder="EB001" id="eb" onKeyUp={buscarEB} />
-          </form>
+          <InputCP label="Buscar:" placeholder="ND001" id="eb" />
           <div className='flex' style={{ width: "430px" }}>
             <div className='flex-1'>
               <ButtonPS estilo="primario" texto="agregar" espacio={"mr-5"} funcion={verAgregar} />
@@ -62,14 +63,19 @@ const EBMain = () => {
             <div className='flex-1'>
               <ButtonPS estilo="secundario" texto="Ver mapa" />
             </div>
+
           </div>
         </div>
       </div>
-      <TableCP titulos={titulosTabla} datos={datosJson} eliminar={verEliminar} actualizar={verActualizar} detalle={verDetalle} />
-      <EBAgregar visible={opacidad} agregar={verAgregar} />
-      <EBActualizar visible={actualizar} ver={verActualizar}/> 
+      <TableCP titulos={titulosTabla} datos={datosJson} eliminar={verEliminar} detalle={verDetalle} actualizar={verActualizar} />
+      <FormNodo visible={opacidad} funcion={verAgregar} />
+      <Eliminar visible={eliminar} funcion={verEliminar} />
+      <Detalle visible={detalle} detalle={verDetalle} />
+      <Actualizar visible={actualizar} actualizar={verActualizar} />
+
+
     </div>
   )
 }
 
-export default EBMain
+export default Nodo

@@ -4,7 +4,13 @@
 @tailwind components;
 @tailwind utilities;
 
-#root{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root {
     min-width: 100vw;
 }
 
@@ -33,7 +39,8 @@ h5 {
     line-height: 27px;
 }
 
-p, label {
+p,
+label {
     font-size: 16px;
     line-height: 27px;
 }
@@ -82,9 +89,28 @@ td {
     color: #348F6C;
 }
 
+.menu svg {
+    height: 24px;
+    width: 24px;
+    color: white;
+}
+
 .hover-txVerde:hover h5,
-.hover-txVerde:hover svg {
+.hover-txVerde:hover svg,
+.hover-txVerde:hover h6,
+.active h5,
+.active h6,
+.active svg,
+.hover-txVerde:hover p {
     color: #348F6C;
+}
+
+.rotate {
+    transition: transform .5s;
+}
+
+.active .rotate {
+    transform: rotate(180deg);
 }
 
 .bgCrema {
@@ -100,36 +126,41 @@ td {
     border-radius: 10px;
 }
 
-.menu svg {
-    height: 24px;
-    width: 24px;
-    color: white;
-}
-
 .active {
     background-color: white;
 }
 
-.active h5,
-.active svg {
-    color: #348F6C;
-}
-.nav{
+
+.nav {
     transition: width .5s, oveflow .5s;
+    scroll-behavior: smooth;
+    height: 100vh;
+    overflow-y: scroll;
 }
 
-.actionVerde{
+.nav::-webkit-scrollbar {    
+    width: 1px;
+}
+
+.nav::-webkit-scrollbar-thumb {
+    background-color: #D7B570;
+}
+
+.actionVerde {
     background-color: #2EAA19;
     border-radius: 2px;
 }
-.actionAzul{
+
+.actionAzul {
     background-color: #0038FF;
     border-radius: 2px;
 }
-.actionRojo{
+
+.actionRojo {
     background-color: #FF0000;
     border-radius: 2px;
 }
-.form{
-    width: 460px;    
+
+.form {
+    width: 460px;
 }
