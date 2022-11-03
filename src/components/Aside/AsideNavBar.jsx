@@ -46,6 +46,7 @@ const AsideNavBar = ({ nombre }) => {
       <SubMenu icon={<BsHouseDoorFill />} titulo="Municipalidad" colapse={colapse}>
       </SubMenu>
       <SubMenu icon={<AiFillSetting />} titulo="Configuración" colapse={colapse}>
+        <AsideNavBarMenu titulo="Incidentes" to="/reporteincidente" />
       </SubMenu>
     </div>
   )

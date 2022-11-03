@@ -31,7 +31,7 @@ const FormIncidente = (props) => {
                     }} /></div>
                 </div>
             </form>
-            <PopupCP visible={opacidad} funcion={verAgregar} title={"Resgistro de Incidentes"} description={"Se ha registrado correctamente"} buttonText={"Aceptar"} icon={<BsCheckCircle />} />
+            <PopupCP visible={opacidad} funcion={verAgregar} title={"Registro de Incidentes"} description={"Se ha registrado correctamente"} buttonText={"Aceptar"} icon={<BsCheckCircle />} />
         </>
         
     )
