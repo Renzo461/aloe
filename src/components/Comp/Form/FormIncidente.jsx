@@ -12,7 +12,7 @@ const FormIncidente = (props) => {
 
     const verAgregar = () =>{
         setopacidad(!opacidad)
-        console.log(opacidad)
+        //console.log(opacidad)
     }
 
     return (

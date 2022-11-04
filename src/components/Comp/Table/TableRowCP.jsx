@@ -1,6 +1,6 @@
 import React from 'react'
 import ActionCP from '../ActionCP'
-const TableRowCP = ({ datos, showAction = true, eliminar, detalle, actualizar, id }) => {
+const TableRowCP = ({ datos, showActions = true, eliminar, detalle, actualizar, id }) => {
     let c = 0
     const dat = datos.map(
         (e) => {
@@ -10,7 +10,7 @@ const TableRowCP = ({ datos, showAction = true, eliminar, detalle, actualizar, i
 
     )
 
-    if (showAction) {
+    if (showActions) {
         return (
             <tr>
                 {dat}
