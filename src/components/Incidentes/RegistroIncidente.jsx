@@ -38,16 +38,18 @@ const ReporteIncidente = () => {
   
   const titulosTabla = ["id", "dni", "descripción", "estado", "fecha y hora", "prioridad"]
 
-  function addIncidente(description) {
+  function addIncidente(description, prioridad, onComplete) {
     let today = new Date();
     let date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
     let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 
-    let newElem = { "id": `${datosJson.length + 1}`, "dni": "53787865", "descripcion": description, "estado": "En proceso", "fecha y hora": `${date} ${time}`, "prioridad": "Media" };
+    let newElem = { "id": `${datosJson.length + 1}`, "dni": "53787865", "descripcion": description, "estado": "En proceso", "fecha y hora": `${date} ${time}`, "prioridad": prioridad };
     //let count = datosJson.push();
     
     //console.log("new count: " + count);
     setDatosJson([...datosJson, newElem]);  
+
+    onComplete();
   }
 
   return (

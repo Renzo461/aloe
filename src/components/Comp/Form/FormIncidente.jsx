@@ -9,11 +9,17 @@ import SelectCP from '../SelectCP'
 const FormIncidente = (props) => {
     const [opacidad, setopacidad] = useState(false)
     const [description, setDescription] = useState("")
+    const [prioridad, setPrioridad] = useState("Media")
 
     const verAgregar = () =>{
         setopacidad(!opacidad)
         //console.log(opacidad)
     }
+
+    const clearForm = () => {
+        setDescription('');
+        setPrioridad("Media");
+    };
 
     return (
         <>
@@ -22,12 +28,15 @@ const FormIncidente = (props) => {
                 props.addIncidente(description);
             }}>
                 <InputCP label="Descripción: " placeholder={"No me permite seleccionar ECA"} id={"descripcion"} className={"pb-5"} required={true} value={description} onChange={()=> setDescription(document.getElementById('descripcion').value)} />
-                <SelectCP label="Prioridad:" options={[{text: "Baja", value: 1},{text: "Media", value: 2}, {text: "Alta", value: 3}]} id={"prioridad"} className={"pb-5"}/>
+                <SelectCP label="Prioridad:" options={[{text: "Baja", value: "Baja"},{text: "Media", value: "Media"}, {text: "Alta", value: "Alta"}]} id={"prioridad"} className={"pb-5"} onChange={(e) => setPrioridad(e.target.value)} value={prioridad}/>
                 <InputFile label="Adjuntar problema:" id={"documento"} className={"pb-5"}/>
                 <div className='flex justify-center' >
                     <div><ButtonPS estilo="primario" texto="Enviar" espacio="px-20" funcion={() => { 
-                        verAgregar();
-                        props.addIncidente(description);
+                        
+                        props.addIncidente(description, prioridad, () => {
+                            verAgregar();
+                            clearForm();
+                        });
                     }} /></div>
                 </div>
             </form>
