@@ -27,7 +27,7 @@ const AsideNavBar = ({ nombre }) => {
       </div>      
       <AsideNavBarUser nombre={nombre}></AsideNavBarUser>
       <SubMenu icon={<FaEnvira />} titulo="Ambiente" colapse={colapse}>
-        <AsideNavBarMenu titulo="ECA" to="/eca" />
+        <AsideNavBarMenu titulo="ECA" to="/informe-eca" />
         <AsideNavBarMenu titulo="Estaciones Base" to="/estaciones" />
         <AsideNavBarMenu titulo="Nodos" to="/nodo" />
         <AsideNavBarMenu titulo="Fábricas" to="/fa" />
@@ -42,6 +42,7 @@ const AsideNavBar = ({ nombre }) => {
         <AsideNavBarMenu titulo="Localizar" to="/" />
       </SubMenu>
       <SubMenu icon={<FaUsers />} titulo="usuarios" colapse={colapse}>
+        <AsideNavBarMenu titulo="Registro Eca" to="/eca" />
       </SubMenu>
       <SubMenu icon={<BsHouseDoorFill />} titulo="Municipalidad" colapse={colapse}>
       </SubMenu>
