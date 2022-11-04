@@ -7,6 +7,7 @@ import RegistroECA from './components/SensoresAmbientales/RegistroECA'
 import RegistroIncidente from './components/Incidentes/RegistroIncidente'
 import Nodo from './components/Nodo/Nodo';
 import AppContextProvider from './components/Context/AppContext';
+import CalendMain from './components/CalendarioCortes/CalendMain';
 const App = () => {
   const name = "laura"
   return (
@@ -22,6 +23,7 @@ const App = () => {
               <Route path='/eca' element={<RegistroECA />} />
               <Route path='/reporteincidente' element={<RegistroIncidente />} />
               <Route path='/nodo' element={<Nodo />} />
+              <Route path='/calendario' element={<CalendMain />} />
             </Routes>
           </div>
         </div>

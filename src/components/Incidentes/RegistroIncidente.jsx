@@ -18,7 +18,6 @@ const ReporteIncidente = () => {
   useEffect(() => {
         // Actualiza el título del documento usando la API del navegador
         if (executeEffect) {
-            //console.log("Beachan was here!!!");
             getIncidentes();
             setExecuteEffect(false);
         }
@@ -62,7 +61,7 @@ const ReporteIncidente = () => {
           </div>
         </div>
       </div>
-      <TableCP titulos={titulosTabla} datos={datosJson} showAction={false}/>
+      <TableCP titulos={titulosTabla} datos={datosJson} showActions={false}/>
       <h6 className='my-7 bold'>Registrar nuevo problema</h6>
       <FormIncidente addIncidente={addIncidente} />
     </div>
