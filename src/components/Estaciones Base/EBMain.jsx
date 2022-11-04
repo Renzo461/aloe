@@ -35,13 +35,13 @@ const EBMain = () => {
   }, [])
 
   const obtenerEB = () => {
-    const URL = "http://192.168.1.40:4040/estacionbase/"
+    const URL = "http://localhost:4040/estacionbase/"
     fetch(URL)
       .then(res => res.json())
       .then(dat => setdatosJson(dat))
   }
   const buscarEB = (id) => {
-    const URL = "http://192.168.1.40:4040/estacionbase/" + id
+    const URL = "http://localhost:4040/estacionbase/" + id
     fetch(URL)
       .then(res => res.json())
       .then(dat => setdatosJson(dat))

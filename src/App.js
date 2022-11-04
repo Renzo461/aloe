@@ -18,9 +18,9 @@ const App = () => {
             <HeaderNavBar nombre={name} />
             <Routes>
               <Route path='/estaciones' element={<EBMain />} />
-              <Route path='/configuracion' element={<InformECA />} />
+              <Route path='/informe-eca' element={<InformECA />} />
               <Route path='/eca' element={<RegistroECA />} />
-              <Route path='/registro-incidente' element={<RegistroIncidente />} />
+              <Route path='/reporteincidente' element={<RegistroIncidente />} />
               <Route path='/nodo' element={<Nodo />} />
             </Routes>
           </div>

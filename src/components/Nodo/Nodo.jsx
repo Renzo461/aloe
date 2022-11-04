@@ -35,13 +35,13 @@ const Nodo = () => {
   }, [])
 
   const obtenerEB = () => {
-    const URL = "http://192.168.1.40:4040/nodo/"
+    const URL = "http://localhost:4040/nodo/"
     fetch(URL)
       .then(res => res.json())
       .then(dat => setdatosJson(dat))
   }
   const buscarEB = (id) => {
-    const URL = "http://192.168.1.40:4040/nodo/" + id
+    const URL = "http://localhost:4040/nodo/" + id
     fetch(URL)
       .then(res => res.json())
       .then(dat => setdatosJson(dat))

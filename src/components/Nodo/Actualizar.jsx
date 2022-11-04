@@ -40,7 +40,7 @@ const Actualizar = ({ visible, actualizar }) => {
                 'Content-Type': 'application/json'
             }
         }
-        const URL = "http://192.168.1.40:4040/nodo/"
+        const URL = "http://localhost:4040/nodo/"
         fetch(URL, body)
         .then(res => res.json())
     }

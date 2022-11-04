@@ -8,7 +8,7 @@ import SelectCP from '../SelectCP'
 
 const FormIncidente = (props) => {
     const [opacidad, setopacidad] = useState(false)
-    const [description, setDescription] = useState(false)
+    const [description, setDescription] = useState("")
 
     const verAgregar = () =>{
         setopacidad(!opacidad)

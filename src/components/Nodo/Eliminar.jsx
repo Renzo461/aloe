@@ -19,7 +19,7 @@ const Eliminar = ({ visible, funcion }) => {
             }
         }
         console.log(idCtx)
-        const URL = "http://192.168.1.40:4040/nodo/" + idCtx
+        const URL = "http://localhost/nodo/" + idCtx
         fetch(URL,body)
           .then(res => res.json())
     }

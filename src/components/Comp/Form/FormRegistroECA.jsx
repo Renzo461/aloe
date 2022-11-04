@@ -12,13 +12,13 @@ const FormRegistroECA = () => {
 
     const verAgregar = () =>{
         setopacidad(!opacidad)
-        console.log(opacidad)
+        //console.log(opacidad)
     }
 
     useEffect(() => {
         // Actualiza el título del documento usando la API del navegador
         if (executeEffect) {
-            console.log("Beachan was here!!!");
+            //console.log("Beachan was here!!!");
             getTipoEca();
             setExecuteEffect(false);
         }
